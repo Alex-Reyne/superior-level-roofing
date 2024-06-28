@@ -1,11 +1,14 @@
-import Image from "next/image.js";
-import { Container } from "./styles.jsx";
-import { images } from '../../app/Constants.js'
+import {Background, Heading, Container} from './styles.jsx';
+import {images} from '../../app/Constants.js';
 
-export default function Banner() {
-  return (
-    <Container>
-      <img src={images.banner} />
-    </Container>
-  );
+export default function Banner(props) {
+	const {header} = props;
+	return (
+		<Container>
+			<Heading>{header}</Heading>
+			<Background>
+				<img src={images.banner} />
+			</Background>
+		</Container>
+	);
 }
