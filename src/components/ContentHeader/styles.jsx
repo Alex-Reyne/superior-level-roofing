@@ -3,15 +3,6 @@
 import styled from 'styled-components';
 import {colors} from '../../app/Constants';
 
-const Container = styled.div`
-	display: flex;
-	justify-content: center;
-
-	min-height: 100vh;
-
-	background-color: ${colors.brandBlack};
-`;
-
 const Heading = styled.div`
 	display: flex;
 	align-items: center;
@@ -33,4 +24,4 @@ const Header = styled.h2`
 	font-size: 64px;
 `;
 
-export {Container, Heading, Header};
+export {Heading, Header};

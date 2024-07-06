@@ -1,17 +1,21 @@
+'use client';
+
 import Banner from '@/components/Banner/Banner.jsx';
 import {Main} from './styles.jsx';
 import NavBar from '@/components/NavBar/NavBar.jsx';
-import Content from '@/components/Content/Content.jsx';
-import {headers} from './Constants.js';
+import ContentHeader from '@/components/ContentHeader/ContentHeader.jsx';
+import {heroText, headers, infoSelectorData} from './Constants.js';
+import InfoSelector from '@/components/InfoSelector/InfoSelector.jsx';
 
 export default function Home() {
 	return (
 		<Main>
 			<NavBar />
-			<Banner header={headers.header1} />
-			<Content header={headers.header2} />
-			<Content header={headers.header3} />
-			<Content header={headers.header4} />
+			<Banner header={heroText} />
+			<ContentHeader header={headers.services} />
+			<InfoSelector infoSelectorData={infoSelectorData} />
+			<ContentHeader header={headers.about} />
+			<ContentHeader header={headers.contact} />
 		</Main>
 	);
 }

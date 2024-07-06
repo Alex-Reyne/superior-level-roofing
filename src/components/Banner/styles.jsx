@@ -4,17 +4,18 @@ import styled from 'styled-components';
 import {colors} from '../../app/Constants';
 
 const Container = styled.div`
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	position: static;
+	text-align: left;
+	color: ${colors.brandYellow};
 `;
 
 const Heading = styled.h1`
-	font-size: 64px;
-	width: 40rem;
-	left: 15%;
 	position: absolute;
+	width: 40rem;
+	top: 50%;
+	left: 15%;
 	z-index: 5;
+	font-size: 64px;
 `;
 
 const Background = styled.div`
