@@ -6,8 +6,8 @@ export default function Banner(props) {
   return (
     <Container>
       <Content>
-        {header.map((line) => {
-          return <Heading>{line}</Heading>
+        {header.map((line, idx) => {
+          return <Heading key={idx}>{line}</Heading>
         })}
         <Button>Book Your Free Inspection</Button>
       </Content>

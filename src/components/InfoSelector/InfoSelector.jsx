@@ -36,10 +36,13 @@ export default function InfoSelector({ infoSelectorData }) {
   return (
     <Container>
       <SelectImage>
-        {infoSelectorData.map((item) => {
+        {infoSelectorData.map((item, idx) => {
           const { title, image, copy, information } = item
           return (
-            <ImageContainer border={checkSelected(image)}>
+            <ImageContainer
+              key={idx}
+              border={checkSelected(image)}
+            >
               <img
                 src={image}
                 onClick={() => {
@@ -64,6 +67,7 @@ export default function InfoSelector({ infoSelectorData }) {
             return (
               <>
                 <Paragraph
+                  key={idx}
                   copyView={copyView}
                   idx={idx}
                 >
