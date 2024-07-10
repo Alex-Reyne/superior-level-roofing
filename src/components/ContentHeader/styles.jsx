@@ -1,27 +1,27 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
-import {colors} from '../../app/Constants';
+import styled from 'styled-components'
+import { colors } from '../../app/Constants.jsx'
 
 const Heading = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	height: 10rem;
-	min-width: 100vw;
+  height: 10rem;
+  min-width: 100vw;
 
-	color: ${colors.brandRed};
-	background-color: ${colors.brandYellow};
+  color: ${colors.brandRed};
+  background-color: ${colors.brandYellow};
 
-	position: relative;
-	top: 0;
+  position: relative;
+  top: 0;
 
-	z-index: 5;
-`;
+  z-index: 5;
+`
 
 const Header = styled.h2`
-	font-size: 64px;
-`;
+  font-size: 64px;
+`
 
-export {Heading, Header};
+export { Heading, Header }

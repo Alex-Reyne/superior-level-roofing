@@ -1,37 +1,46 @@
-'use client';
+'use client'
 
-import styled from 'styled-components';
-import {colors} from '../../app/Constants';
+import styled from 'styled-components'
+import { colors } from '../../app/Constants.jsx'
 
 const Container = styled.div`
-	position: static;
-	text-align: left;
-	color: ${colors.brandYellow};
-`;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: ${colors.brandYellow};
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    z-index: 1;
+    object-fit: cover;
+  }
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: absolute;
+  z-index: 5;
+`
 
 const Heading = styled.h1`
-	position: absolute;
-	width: 40rem;
-	top: 50%;
-	left: 15%;
-	z-index: 5;
-	font-size: 64px;
-`;
+  font-size: 6rem;
+`
 
-const Background = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	height: 100vh;
+const Button = styled.div`
+  margin-top: 1rem;
+  max-width: fit-content;
 
-	background-color: ${colors.brandWhite};
+  padding: 1rem 2rem;
+  border-radius: 15px;
 
-	img {
-		z-index: 1;
-		min-width: 100%;
-		min-height: 100%;
-	}
-`;
+  font-weight: 600;
+  font-size: 4rem;
+  color: ${colors.brandWhite};
+  background-color: ${colors.brandRed};
+`
 
-export {Container, Heading, Background};
+export { Container, Heading, Content, Button }

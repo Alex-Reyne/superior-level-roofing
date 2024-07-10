@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
+  reactStrictMode: true,
   compiler: {
     styledComponents: true,
   },
@@ -9,10 +9,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-        port: ''
-      }
-    ]
-  }
-};
+        port: '',
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
