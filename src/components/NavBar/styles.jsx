@@ -33,6 +33,10 @@ const Links = styled.div`
     font-weight: 600;
     text-decoration: none;
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `
 
 export { Container, Links }

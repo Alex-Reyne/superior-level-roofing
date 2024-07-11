@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useIsMobile from '../../app/Hooks/useIsMobile'
 import {
   Container,
   SelectImage,
@@ -6,16 +7,19 @@ import {
   ImageContainer,
   TextContainer,
   Paragraph,
+  MobileContainer,
 } from '../InfoSelector/styles'
+import Carousel from '../Carousel/Carousel'
 
 export default function InfoSelector({ infoSelectorData }) {
   const [copyView, setCopyview] = useState('small')
   const [delayHandler, setDelayHandler] = useState(null)
-
   const [selectedImage, setSelectedImage] = useState(infoSelectorData[0].image)
   const [selectedCopy, setSelectedCopy] = useState(infoSelectorData[0].copy)
 
-  const handleMouseEnter = (event) => {
+  const isMobile = useIsMobile()
+
+  const handleMouseEnter = () => {
     if (delayHandler) clearTimeout(delayHandler)
     setDelayHandler(setCopyview('expanded'))
   }
@@ -35,51 +39,97 @@ export default function InfoSelector({ infoSelectorData }) {
 
   return (
     <Container>
-      <SelectImage>
-        {infoSelectorData.map((item, idx) => {
-          const { title, image, copy, information } = item
-          return (
-            <ImageContainer
-              key={idx}
-              border={checkSelected(image)}
-            >
-              <img
-                src={image}
-                onClick={() => {
-                  setSelectedImage(image)
-                  setSelectedCopy(copy)
-
-                  setCopyview('small')
-                }}
-              />
-              <h3>{title}</h3>
-            </ImageContainer>
-          )
-        })}
-      </SelectImage>
-      <SelectedImage>
-        <TextContainer
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          expanded={copyView}
-        >
-          {selectedCopy.map((copy, idx) => {
-            return (
-              <>
-                <Paragraph
+      {isMobile ? (
+        // infoSelectorData.map((item, idx) => {
+        //   const { title, image, copy } = item
+        //   return (
+        //     <MobileContainer>
+        //       <ImageContainer key={idx}>
+        //         <img src={image} />
+        //       </ImageContainer>
+        //       <h3>{title}</h3>
+        //       {copy.map((copy, idx) => {
+        //         return (
+        //           <>
+        //             <Paragraph
+        //               key={idx}
+        //               copyView={copyView}
+        //               idx={idx}
+        //             >
+        //               {copy}
+        //             </Paragraph>
+        //             {idx === 0 ? <br /> : null}
+        //           </>
+        //         )
+        //       })}
+        //       {copyView === 'small' ? (
+        //         <button onClick={() => setCopyview('expanded')}>
+        //           Learn More
+        //         </button>
+        //       ) : (
+        //         <button
+        //           onClick={() => {
+        //             setCopyview('small')
+        //           }}
+        //         >
+        //           Close
+        //         </button>
+        //       )}
+        //     </MobileContainer>
+        //   )
+        // })
+        <>
+          {/* {console.log(images)} */}
+          <Carousel data={infoSelectorData} />
+        </>
+      ) : (
+        <>
+          <SelectImage>
+            {infoSelectorData.map((item, idx) => {
+              const { title, image, copy } = item
+              return (
+                <ImageContainer
                   key={idx}
-                  copyView={copyView}
-                  idx={idx}
+                  border={checkSelected(image)}
                 >
-                  {copy}
-                </Paragraph>
-                {idx === 0 ? <br /> : null}
-              </>
-            )
-          })}
-        </TextContainer>
-        <img src={selectedImage} />
-      </SelectedImage>
+                  <img
+                    src={image}
+                    onClick={() => {
+                      setSelectedImage(image)
+                      setSelectedCopy(copy)
+                      setCopyview('small')
+                    }}
+                  />
+                  <h3>{title}</h3>
+                </ImageContainer>
+              )
+            })}
+          </SelectImage>
+          <SelectedImage>
+            <TextContainer
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              expanded={copyView}
+            >
+              {selectedCopy.map((copy, idx) => {
+                return (
+                  <>
+                    <Paragraph
+                      key={idx}
+                      copyView={copyView}
+                      idx={idx}
+                    >
+                      {copy}
+                    </Paragraph>
+                    {idx === 0 ? <br /> : null}
+                  </>
+                )
+              })}
+            </TextContainer>
+            <img src={selectedImage} />
+          </SelectedImage>
+        </>
+      )}
     </Container>
   )
 }

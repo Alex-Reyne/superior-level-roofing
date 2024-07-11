@@ -2,51 +2,95 @@ import styled from 'styled-components'
 import { colors } from '../../app/Constants.jsx'
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 
   color: ${colors.brandBlue};
 
-  width: 75%;
-  max-width: 1200px;
-  max-height: 725px;
+  width: 100%;
+  max-width: 1000px;
   margin: 10rem 0;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
+    margin: 5rem;
+    padding: 0 5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 5%;
+    position: relative;
+    margin: 0;
+  }
 `
 
 const SelectImage = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+
+  grid-column: 1 / 2;
+  align-items: center;
 
   font-size: 1.25rem;
   text-align: center;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: row;
+    grid-row: 2 / 3;
+  }
 `
 
 const ImageContainer = styled.div`
   margin: 1rem;
+
   img {
-    width: 117px;
-    height: 117px;
+    width: 100%;
+    height: 8rem;
     object-fit: cover;
     border-radius: 25px;
+    overflow: hidden;
     outline: ${(props) =>
       props.border ? `0.5rem solid ${colors.brandYellow}` : ''};
     outline-offset: -0.5rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    img {
+      width: 100%;
+      height: 100%;
+      outline: 0.5rem solid ${colors.brandYellow};
+    }
   }
 `
 
 const SelectedImage = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
+  grid-column: 2 / 6;
   margin: 1rem;
   position: relative;
+
   img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     object-fit: cover;
     border-radius: 25px;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 1100px) {
+    grid-column: auto;
+    grid-row: 1 / 2;
+
+    img {
+      height: 100%;
+      position: absolute;
+    }
   }
 `
 
@@ -82,6 +126,12 @@ const Paragraph = styled.p`
     props.idx === 1 && props.copyView === 'small' ? 'none' : null};
 `
 
+const MobileContainer = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+`
+
 export {
   Container,
   SelectImage,
@@ -89,4 +139,5 @@ export {
   ImageContainer,
   TextContainer,
   Paragraph,
+  MobileContainer,
 }
