@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useIsMobile from '../../app/Hooks/useIsMobile'
 import {
   Container,
