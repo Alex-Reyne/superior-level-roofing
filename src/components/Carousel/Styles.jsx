@@ -1,5 +1,5 @@
 const { default: styled } = require('styled-components')
-import { colors } from '@/app/Constants'
+import { colors } from '../../app/Constants'
 
 /* src/Carousel.css */
 const CarouselContainer = styled.div`
