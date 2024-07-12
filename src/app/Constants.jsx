@@ -17,8 +17,19 @@ export const headers = {
 }
 
 export const images = {
-  banner:
-    'https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  logo: 'superior-level-roofing-logo.png',
+  banner: 'banner-image.avif',
+  gallery: [
+    'finished-shingles-2024-black-01.jpeg',
+    'finished-shingles-2024-black-02.jpeg',
+    'finished-shingles-2024-black-03.jpeg',
+    'finished-shingles-2024-brown-01.jpeg',
+    'finished-shingles-2024-grey-01.jpeg',
+    'finished-shingles-2024-grey-02.jpeg',
+    'finished-shingles-2024-grey-03.jpeg',
+    'complex-shingles-2024-01.jpeg',
+    'gutter-cleaning-2024-01.jpeg',
+  ],
 }
 
 export const infoSelectorData = [

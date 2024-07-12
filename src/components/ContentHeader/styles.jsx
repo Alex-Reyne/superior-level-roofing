@@ -14,6 +14,13 @@ const Heading = styled.div`
   color: ${colors.brandRed};
   background-color: ${colors.brandYellow};
 
+  /* background: linear-gradient(
+    90deg,
+    rgba(255, 209, 102, 0) 0%,
+    rgba(255, 209, 102, 1) 50%,
+    rgba(255, 209, 102, 0) 100%
+  ); */
+
   position: relative;
   top: 0;
 
