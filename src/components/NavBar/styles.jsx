@@ -26,6 +26,11 @@ const Container = styled.div`
 
     z-index: 1000;
   }
+  @media screen and (max-width: 480px) {
+    img {
+      height: 75px;
+    }
+  }
 `
 
 const Links = styled.div`
@@ -78,6 +83,10 @@ const Links = styled.div`
 
     transition: visibility 0.3s, opacity 0.3s linear;
   }
+
+  @media screen and (max-width: 480px) {
+    top: calc(4rem + 75px);
+  }
 `
 
 const BurgerMenu = styled.div`
@@ -92,6 +101,13 @@ const BurgerMenu = styled.div`
     height: 1rem;
     width: 100%;
     background-color: ${colors.brandRed};
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 50px;
+    div {
+      height: 0.75rem;
+    }
   }
 `
 
