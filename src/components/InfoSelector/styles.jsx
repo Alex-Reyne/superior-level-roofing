@@ -11,7 +11,7 @@ const Container = styled.div`
   max-width: 1000px;
   margin: 10rem 0;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 1fr;
     margin: 0 5rem 5rem 5rem;
@@ -19,7 +19,7 @@ const Container = styled.div`
     gap: 1rem;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
     grid-template-rows: 1fr;
     padding: 0 5%;
     position: relative;
@@ -39,7 +39,7 @@ const SelectImage = styled.div`
   font-size: 1.25rem;
   text-align: center;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: row;
     grid-row: 2 / 3;
   }
@@ -49,8 +49,8 @@ const ImageContainer = styled.div`
   margin: 1rem;
 
   img {
-    width: 100%;
     height: 8rem;
+    width: auto;
     object-fit: cover;
     border-radius: 25px;
     overflow: hidden;
@@ -59,8 +59,9 @@ const ImageContainer = styled.div`
     outline-offset: -0.5rem;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     margin: 0;
+    font-size: 1rem;
   }
 `
 
@@ -78,7 +79,7 @@ const SelectedImage = styled.div`
     bottom: 0;
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     grid-column: auto;
     grid-row: 1 / 2;
     width: 100%;

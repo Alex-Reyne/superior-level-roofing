@@ -107,7 +107,7 @@ const Modal = styled.div`
     color: ${colors.brandBlue};
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 700px) {
     font-size: 1.25rem;
   }
 `

@@ -5,11 +5,11 @@ export default function useIsMobile() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth <= 768)
+      setIsMobile(window.innerWidth <= 700)
     }
 
     const onResize = () => {
-      setIsMobile(window.innerWidth <= 768)
+      setIsMobile(window.innerWidth <= 700)
     }
 
     window.addEventListener('resize', onResize)
