@@ -4,7 +4,7 @@ import { images } from '../../app/Constants.jsx'
 export default function Banner(props) {
   const { header } = props
   return (
-    <Container>
+    <Container id="home">
       <Content>
         {header.map((line, idx) => {
           return <Heading key={idx}>{line}</Heading>

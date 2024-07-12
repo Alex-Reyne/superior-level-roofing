@@ -76,8 +76,8 @@ const ExpandButton = styled.button`
   ${(props) =>
     props.expanded &&
     `
-  background-color: ${colors.brandRed};
-  margin-top: 1.5rem;
+    background-color: ${colors.brandRed};
+    margin-top: 1.5rem;
   `}
 `
 const Modal = styled.div`

@@ -12,6 +12,7 @@ export const headers = {
   services: 'Services',
   about: 'About',
   contact: 'Contact',
+  gallery: 'Gallery',
 }
 
 export const images = {
@@ -23,7 +24,7 @@ export const infoSelectorData = [
   {
     title: 'Roofing',
     image:
-      'https://www.clevercanadian.ca/wp-content/uploads/2022/11/The-Top-5-Gutter-Cleaning-Services-in-Edmonton.jpg',
+      'https://www.clevercanadian.ca/wp-content/uploads/2022/11/The-5-Best-Roofing-Companies-in-Edmonton.jpg',
     copy: [
       'We take a professional approach and take our time to ensure the job is done right. We provide photos and a report for every step of the job.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -32,7 +33,7 @@ export const infoSelectorData = [
   {
     title: 'Gutter Cleaning',
     image:
-      'https://victorylawn.com/wp-content/uploads/2021/10/Residential-Snow-Removal-Service-2048x1365-1.webp',
+      'https://www.clevercanadian.ca/wp-content/uploads/2022/11/The-Top-5-Gutter-Cleaning-Services-in-Edmonton.jpg',
 
     copy: [
       'Let us professionally detail your driveway, walkway, steps and siding.',
@@ -51,7 +52,7 @@ export const infoSelectorData = [
   {
     title: 'Snow Removal',
     image:
-      'https://www.clevercanadian.ca/wp-content/uploads/2022/11/The-5-Best-Roofing-Companies-in-Edmonton.jpg',
+      'https://victorylawn.com/wp-content/uploads/2021/10/Residential-Snow-Removal-Service-2048x1365-1.webp',
     copy: [
       'In the winter months, our team will be ready for every storm that comes our way.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',

@@ -104,8 +104,8 @@ const TextContainer = styled.div`
   overflow: hidden;
 
   border-radius: 0 0 25px 25px;
-  background-color: ${colors.brandYellow};
-  opacity: 75%;
+  background-color: rgba(255, 209, 102, 0.75);
+  backdrop-filter: blur(2px);
 
   padding: 2rem;
   max-height: 9rem;

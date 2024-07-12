@@ -12,10 +12,23 @@ export default function Home() {
     <Main>
       <NavBar />
       <Banner header={heroText} />
-      <ContentHeader header={headers.services} />
+      <ContentHeader
+        id={'services'}
+        header={headers.services}
+      />
       <InfoSelector infoSelectorData={infoSelectorData} />
-      <ContentHeader header={headers.about} />
-      <ContentHeader header={headers.contact} />
+      <ContentHeader
+        id={'gallery'}
+        header={headers.gallery}
+      />
+      <ContentHeader
+        id={'about'}
+        header={headers.about}
+      />
+      <ContentHeader
+        id={'contact'}
+        header={headers.contact}
+      />
     </Main>
   )
 }
