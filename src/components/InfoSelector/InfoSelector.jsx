@@ -40,48 +40,7 @@ export default function InfoSelector({ infoSelectorData }) {
   return (
     <Container>
       {isMobile ? (
-        // infoSelectorData.map((item, idx) => {
-        //   const { title, image, copy } = item
-        //   return (
-        //     <MobileContainer>
-        //       <ImageContainer key={idx}>
-        //         <img src={image} />
-        //       </ImageContainer>
-        //       <h3>{title}</h3>
-        //       {copy.map((copy, idx) => {
-        //         return (
-        //           <>
-        //             <Paragraph
-        //               key={idx}
-        //               copyView={copyView}
-        //               idx={idx}
-        //             >
-        //               {copy}
-        //             </Paragraph>
-        //             {idx === 0 ? <br /> : null}
-        //           </>
-        //         )
-        //       })}
-        //       {copyView === 'small' ? (
-        //         <button onClick={() => setCopyview('expanded')}>
-        //           Learn More
-        //         </button>
-        //       ) : (
-        //         <button
-        //           onClick={() => {
-        //             setCopyview('small')
-        //           }}
-        //         >
-        //           Close
-        //         </button>
-        //       )}
-        //     </MobileContainer>
-        //   )
-        // })
-        <>
-          {/* {console.log(images)} */}
-          <Carousel data={infoSelectorData} />
-        </>
+        <Carousel data={infoSelectorData} />
       ) : (
         <>
           <SelectImage>

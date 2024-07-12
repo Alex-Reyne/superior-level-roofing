@@ -8,13 +8,12 @@ const CarouselContainer = styled.div`
   grid-template-rows: repeat(1fr);
   justify-items: center;
   align-items: center;
-  margin-top: 10rem;
+  margin: 5rem 0;
 
   position: relative;
 
   h2 {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1 / 4;
 
     text-align: center;
     font-size: 4rem;
@@ -55,8 +54,7 @@ const CarouselImg = styled.img`
 
 const CarouselCopy = styled.p`
   color: white;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column: 1 / 4;
 
   text-align: center;
   font-size: 1.5rem;
@@ -107,6 +105,10 @@ const Modal = styled.div`
 
     margin-bottom: 2rem;
     color: ${colors.brandBlue};
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 1.25rem;
   }
 `
 
