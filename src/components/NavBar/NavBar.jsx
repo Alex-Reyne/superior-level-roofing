@@ -5,16 +5,39 @@ import Link from 'next/link'
 import useIsMobile from '../../app/Hooks/useIsMobile'
 import { useState } from 'react'
 
-export default function NavBar() {
+export default function NavBar({ headers }) {
   const [isOpen, setIsOpen] = useState(false)
   const isMobile = useIsMobile()
   const handleOpen = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true)
   }
 
+  const NavItems = () => {
+    return (
+      <Links isOpen={isOpen}>
+        {Object.entries(headers).map(([k, v], idx) => {
+          return (
+            <Link
+              key={idx}
+              href={`#${k}`}
+              onClick={() => {
+                setIsOpen(false)
+              }}
+            >
+              {v}
+            </Link>
+          )
+        })}
+      </Links>
+    )
+  }
+
   return (
     <Container>
-      <Image src={logo} />
+      <Image
+        alt="superior level roofing logo"
+        src={logo}
+      />
       {isMobile && (
         <BurgerMenu
           onClick={() => {
@@ -26,40 +49,7 @@ export default function NavBar() {
           <div></div>
         </BurgerMenu>
       )}
-      <Links isOpen={isOpen}>
-        <Link
-          href="#home"
-          onClick={() => {
-            setIsOpen(false)
-          }}
-        >
-          Home
-        </Link>
-        <Link
-          href="#services"
-          onClick={() => {
-            setIsOpen(false)
-          }}
-        >
-          Services
-        </Link>
-        <Link
-          href="#about"
-          onClick={() => {
-            setIsOpen(false)
-          }}
-        >
-          About
-        </Link>
-        <Link
-          href="#contact"
-          onClick={() => {
-            setIsOpen(false)
-          }}
-        >
-          Contact
-        </Link>
-      </Links>
+      {NavItems()}
     </Container>
   )
 }

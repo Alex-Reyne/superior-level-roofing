@@ -9,10 +9,11 @@ export const colors = {
 export const heroText = [`GET IT DONE`, `THE SUPERIOR WAY`]
 
 export const headers = {
+  home: 'Home',
   services: 'Services',
+  gallery: 'Gallery',
   about: 'About',
   contact: 'Contact',
-  gallery: 'Gallery',
 }
 
 export const images = {

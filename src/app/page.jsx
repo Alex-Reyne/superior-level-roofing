@@ -10,7 +10,7 @@ import InfoSelector from '../components/InfoSelector/InfoSelector.jsx'
 export default function Home() {
   return (
     <Main>
-      <NavBar />
+      <NavBar headers={headers} />
       <Banner header={heroText} />
       <ContentHeader
         id={'services'}
