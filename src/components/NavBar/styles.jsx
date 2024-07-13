@@ -105,6 +105,8 @@ const BurgerMenu = styled.div`
 
   @media screen and (max-width: 480px) {
     height: 50px;
+    width: 60px;
+
     div {
       height: 0.75rem;
     }
