@@ -1,4 +1,4 @@
-import { Background, Heading, Container, Content, Button } from './styles.jsx'
+import { Heading, Container, Content, Button } from './styles.jsx'
 import { images } from '../../app/Constants.jsx'
 
 export default function Banner(props) {
