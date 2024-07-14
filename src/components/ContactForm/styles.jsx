@@ -9,6 +9,25 @@ const Container = styled.div`
   width: 60%;
   max-width: 1200px;
   margin: 10rem 0;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    width: 80%;
+    align-items: center;
+  }
+`
+
+const FormContainer = styled.div`
+  color: ${colors.brandYellow};
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 3rem;
+  }
 `
 
 const Form = styled.div`
@@ -18,7 +37,7 @@ const Form = styled.div`
   font-size: 2rem;
   text-align: start;
   color: ${colors.brandWhite};
-  width: 50%;
+  width: 100%;
   gap: 1rem;
 
   input,
@@ -35,6 +54,7 @@ const Form = styled.div`
   #fname {
     grid-column: span 2 / span 2;
   }
+
   #lname {
     grid-column: span 2 / span 2;
     grid-column-start: 3;
@@ -44,16 +64,40 @@ const Form = styled.div`
     grid-column: span 4 / span 4;
     grid-row-start: 2;
   }
+
+  #submit {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
   #message {
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
     grid-column-start: 1;
     grid-row-start: 3;
   }
-  #submit {
-    grid-column-start: 4;
-    grid-row-start: 6;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
+`
+const Submit = styled.div`
+  display: flex;
+  grid-column: 2 / 4;
+  grid-row-start: 6;
+
+  color: ${colors.brandWhite};
+  background-color: ${colors.brandBlue};
+  font-size: 2rem;
+  border-radius: 15px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
 `
 
 const ContactInfo = styled.div`
@@ -71,5 +115,9 @@ const ContactInfo = styled.div`
     font-size: 2rem;
     color: ${colors.brandWhite};
   }
+
+  @media screen and (max-width: 767px) {
+    align-self: flex-start;
+  }
 `
-export { Form, Container, ContactInfo }
+export { Form, Container, ContactInfo, FormContainer, Submit }

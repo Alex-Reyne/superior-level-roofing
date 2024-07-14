@@ -1,5 +1,11 @@
 import { sendEmail } from './sendEmail.js'
-import { ContactInfo, Container, Form } from './styles.jsx'
+import {
+  ContactInfo,
+  Container,
+  Form,
+  FormContainer,
+  Submit,
+} from './styles.jsx'
 
 export default function ContactForm(props) {
   // const { image } = props
@@ -22,34 +28,38 @@ export default function ContactForm(props) {
         <h3>Social Media:</h3>
         <p>Facebook Icon</p>
       </ContactInfo>
-      <Form>
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-        />
-        <input
-          type="text"
-          id="lname"
-          name="lname"
-        />
-        <input
-          type="text"
-          id="email"
-          name="email"
-        />
-        <textarea
-          type="text"
-          id="message"
-          name="message"
-        />
-        <input
-          type="submit"
-          id="submit"
-          value="Submit"
-          onClick={() => sendEmail(msg)}
-        />
-      </Form>
+      <FormContainer>
+        <h3>Send us and email</h3>
+        <Form>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+          />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+          />
+          <input
+            type="text"
+            id="email"
+            name="email"
+          />
+          <textarea
+            type="text"
+            id="message"
+            name="message"
+          />
+          <Submit onClick={() => sendEmail(msg)}>
+            <input
+              type="submit"
+              id="submit"
+              value="Submit"
+            />
+          </Submit>
+        </Form>
+      </FormContainer>
       {/* <button onClick={() => sendEmail(msg)}>testEmail</button> */}
     </Container>
   )
