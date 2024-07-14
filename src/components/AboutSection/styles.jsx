@@ -41,6 +41,7 @@ const About = styled.p`
 
   @media screen and (max-width: 767px) {
     font-size: 2rem;
+    padding: 5rem 0 0 0;
   }
 `
 export { About, Container }
