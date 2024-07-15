@@ -2,22 +2,27 @@ import { colors } from '../../app/Constants'
 import { styled } from 'styled-components'
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20%;
-  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 80%;
   max-width: 1200px;
   margin: 10rem 0;
 
+  @media screen and (min-width: 768px) {
+    gap: 2rem;
+  }
   @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
-    width: 80%;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
   }
 `
 
 const FormContainer = styled.div`
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  grid-column-start: 4;
   color: ${colors.brandYellow};
 
   h3 {
@@ -25,12 +30,18 @@ const FormContainer = styled.div`
     margin-bottom: 1rem;
   }
 
+  @media screen and (min-width: 768px) {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column: span 3 / span 3;
+  }
   @media screen and (max-width: 767px) {
-    margin-bottom: 3rem;
+    grid-column: span 2 / span 2;
+    grid-row-start: 1;
   }
 `
 
-const Form = styled.div`
+const Form = styled.form`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -88,8 +99,9 @@ const Form = styled.div`
 `
 const Submit = styled.div`
   display: flex;
-  grid-column: 2 / 4;
+  grid-column: 4 / 5;
   grid-row-start: 6;
+  /* max-width: 10rem; */
 
   color: ${colors.brandWhite};
   background-color: ${colors.brandBlue};
@@ -103,6 +115,8 @@ const Submit = styled.div`
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
   gap: 1rem;
 
   h3 {
@@ -117,7 +131,7 @@ const ContactInfo = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    align-self: flex-start;
+    grid-column: span 2 / span 2;
   }
 `
 export { Form, Container, ContactInfo, FormContainer, Submit }

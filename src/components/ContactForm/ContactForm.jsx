@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { sendEmail } from './sendEmail.js'
 import {
   ContactInfo,
@@ -7,16 +8,16 @@ import {
   Submit,
 } from './styles.jsx'
 
-export default function ContactForm(props) {
-  // const { image } = props
+const msg = {
+  to: '', // Change to your recipient
+  from: 'jccustomcreations@gmail.com', // Change to your verified sender
+  subject: '',
+  text: '',
+  html: '<strong>Sent From superiorlevelroofing.com</strong>',
+}
 
-  const msg = {
-    to: 'creativereyne@gmail.com', // Change to your recipient
-    from: 'jccustomcreations@gmail.com', // Change to your verified sender
-    subject: 'this is a test email',
-    text: 'Just checking if my test works?',
-    html: '<strong>Please work :(</strong>',
-  }
+export default function ContactForm() {
+  const [form, setForm] = useState(msg)
 
   return (
     <Container>
@@ -35,32 +36,43 @@ export default function ContactForm(props) {
             type="text"
             id="fname"
             name="fname"
+            placeholder="First Name"
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
           />
           <input
             type="text"
             id="lname"
             name="lname"
+            placeholder="Last Name"
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
           />
           <input
             type="text"
             id="email"
             name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
           <textarea
             type="text"
             id="message"
             name="message"
+            placeholder="Message"
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
           <Submit onClick={() => sendEmail(msg)}>
             <input
               type="submit"
               id="submit"
-              value="Submit"
+              value="Send"
             />
           </Submit>
         </Form>
       </FormContainer>
-      {/* <button onClick={() => sendEmail(msg)}>testEmail</button> */}
     </Container>
   )
 }

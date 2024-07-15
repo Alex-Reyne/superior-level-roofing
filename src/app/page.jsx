@@ -7,6 +7,7 @@ import {
   infoSelectorData,
   images,
   aboutText,
+  footerText,
 } from './Constants.jsx'
 import NavBar from '../components/NavBar/NavBar.jsx'
 import Banner from '../components/Banner/Banner.jsx'
@@ -15,6 +16,7 @@ import InfoSelector from '../components/InfoSelector/InfoSelector.jsx'
 import ImageGallery from '../components/ImageGallery/ImageGallery.jsx'
 import AboutSection from '../components/AboutSection/AboutSection.jsx'
 import ContactForm from '../components/ContactForm/ContactForm.jsx'
+import Footer from '../components/Footer/Footer.jsx'
 
 export default function Home() {
   return (
@@ -44,6 +46,7 @@ export default function Home() {
         header={headers.contact}
       />
       <ContactForm />
+      <Footer footerText={footerText} />
     </Main>
   )
 }
