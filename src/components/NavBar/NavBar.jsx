@@ -1,6 +1,6 @@
 import Image from 'next/image.js'
 import logo from '../../../public/superior-level-roofing-logo.png'
-import { Container, Links, BurgerMenu } from './styles.jsx'
+import { Container, Links, BurgerMenu, Content } from './styles.jsx'
 import Link from 'next/link'
 import useIsMobile from '../../app/Hooks/useIsMobile'
 import { useState } from 'react'
@@ -34,22 +34,24 @@ export default function NavBar({ headers }) {
 
   return (
     <Container>
-      <Image
-        alt="superior level roofing logo"
-        src={logo}
-      />
-      {isMobile && (
-        <BurgerMenu
-          onClick={() => {
-            handleOpen()
-          }}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </BurgerMenu>
-      )}
-      {NavItems()}
+      <Content>
+        <Image
+          alt="superior level roofing logo"
+          src={logo}
+        />
+        {isMobile && (
+          <BurgerMenu
+            onClick={() => {
+              handleOpen()
+            }}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </BurgerMenu>
+        )}
+        {NavItems()}
+      </Content>
     </Container>
   )
 }

@@ -9,7 +9,7 @@ import {
 } from './styles.jsx'
 
 const msg = {
-  to: '', // Change to your recipient
+  to: 'creativereyne@gmail.com', // Change to your recipient
   from: 'jccustomcreations@gmail.com', // Change to your verified sender
   subject: '',
   text: '',
@@ -64,7 +64,7 @@ export default function ContactForm() {
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
-          <Submit onClick={() => sendEmail(msg)}>
+          <Submit onClick={() => sendEmail(form)}>
             <input
               type="submit"
               id="submit"

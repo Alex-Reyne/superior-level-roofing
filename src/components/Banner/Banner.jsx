@@ -1,4 +1,4 @@
-import { Heading, Container, Content, Button } from './styles.jsx'
+import { Heading, Container, Content, Button, CTA } from './styles.jsx'
 import { images } from '../../app/Constants.jsx'
 
 export default function Banner(props) {
@@ -9,7 +9,12 @@ export default function Banner(props) {
         {header.map((line, idx) => {
           return <Heading key={idx}>{line}</Heading>
         })}
-        <Button>Book Your Free Inspection</Button>
+        <CTA>
+          <p>
+            <Button>Book</Button>
+            Your Free Inspection
+          </p>
+        </CTA>
       </Content>
       <img src={images.banner} />
     </Container>

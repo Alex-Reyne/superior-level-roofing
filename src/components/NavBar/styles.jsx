@@ -6,7 +6,7 @@ import { colors } from '../../app/Constants.jsx'
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem 10%;
   width: 100vw;
 
@@ -31,6 +31,14 @@ const Container = styled.div`
       height: 75px;
     }
   }
+`
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 1200px;
 `
 
 const Links = styled.div`
@@ -113,4 +121,4 @@ const BurgerMenu = styled.div`
   }
 `
 
-export { Container, Links, BurgerMenu }
+export { Container, Links, BurgerMenu, Content }
