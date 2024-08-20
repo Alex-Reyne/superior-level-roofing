@@ -11,7 +11,9 @@ export default function Banner(props) {
         })}
         <CTA>
           <p>
-            <Button>Book</Button>
+            <a href="tel:6399984303">
+              <Button>Book</Button>
+            </a>
             Your Free Inspection
           </p>
         </CTA>

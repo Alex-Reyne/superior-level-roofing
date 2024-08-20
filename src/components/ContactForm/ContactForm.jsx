@@ -9,11 +9,10 @@ import {
 } from './styles.jsx'
 
 const msg = {
-  to: 'creativereyne@gmail.com', // Change to your recipient
+  to: 'jccustomcreations@gmail.com', // Change to your recipient
   from: 'jccustomcreations@gmail.com', // Change to your verified sender
   subject: '',
   text: '',
-  html: '<strong>Sent From superiorlevelroofing.com</strong>',
 }
 
 export default function ContactForm() {
@@ -27,7 +26,12 @@ export default function ContactForm() {
         <h3>Email:</h3>
         <p>apps.dylan6@gmail.com</p>
         <h3>Social Media:</h3>
-        <p>Facebook Icon</p>
+        <a
+          href="https://www.facebook.com/SuperiorHouseCare"
+          target="_blank"
+        >
+          <img src="facebook-app-round-white-icon.webp" />
+        </a>
       </ContactInfo>
       <FormContainer>
         <h3>Send us and email</h3>
@@ -54,7 +58,7 @@ export default function ContactForm() {
             name="email"
             placeholder="Email"
             value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            onChange={(e) => setForm({ ...form, replyTo: e.target.value })}
           />
           <textarea
             type="text"
@@ -62,14 +66,14 @@ export default function ContactForm() {
             name="message"
             placeholder="Message"
             value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            onChange={(e) => setForm({ ...form, text: e.target.value })}
           />
-          <Submit onClick={() => sendEmail(form)}>
-            <input
-              type="submit"
-              id="submit"
-              value="Send"
-            />
+          <Submit
+            type="submit"
+            id="submit"
+            onClick={(e) => sendEmail(e, form)}
+          >
+            Send
           </Submit>
         </Form>
       </FormContainer>

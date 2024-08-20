@@ -124,10 +124,20 @@ const Paragraph = styled.p`
     props.idx === 1 && props.copyView === 'small' ? 'none' : null};
 `
 
-const MobileContainer = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+const Button = styled.button`
+  color: white;
+  border: none;
+  background-color: ${colors.brandBlue};
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  width: max-content;
+  text-align: center;
+  font-size: 1.5rem;
+  grid-column-start: 2;
+  cursor: pointer;
+
+  margin-top: 1rem;
+  display: ${(props) => (props.copyView === 'small' ? 'none' : null)};
 `
 
 export {
@@ -137,5 +147,5 @@ export {
   ImageContainer,
   TextContainer,
   Paragraph,
-  MobileContainer,
+  Button,
 }

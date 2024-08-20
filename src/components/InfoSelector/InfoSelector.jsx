@@ -7,7 +7,7 @@ import {
   ImageContainer,
   TextContainer,
   Paragraph,
-  MobileContainer,
+  Button,
 } from '../InfoSelector/styles'
 import Carousel from '../Carousel/Carousel'
 
@@ -84,6 +84,9 @@ export default function InfoSelector({ infoSelectorData }) {
                   </>
                 )
               })}
+              <a href={'#contact'}>
+                <Button copyView={copyView}>book now</Button>
+              </a>
             </TextContainer>
             <img src={selectedImage} />
           </SelectedImage>

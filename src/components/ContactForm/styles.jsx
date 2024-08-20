@@ -76,16 +76,6 @@ const Form = styled.form`
     grid-row-start: 2;
   }
 
-  #submit {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
-
   #message {
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
@@ -97,11 +87,10 @@ const Form = styled.form`
     width: 100%;
   }
 `
-const Submit = styled.div`
+const Submit = styled.button`
   display: flex;
   grid-column: 4 / 5;
   grid-row-start: 6;
-  /* max-width: 10rem; */
 
   color: ${colors.brandWhite};
   background-color: ${colors.brandBlue};
@@ -110,6 +99,12 @@ const Submit = styled.div`
   font-weight: 600;
   justify-content: center;
   align-items: center;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: ${colors.brandYellow};
+  }
 `
 
 const ContactInfo = styled.div`
@@ -128,6 +123,12 @@ const ContactInfo = styled.div`
   p {
     font-size: 2rem;
     color: ${colors.brandWhite};
+  }
+
+  a,
+  img {
+    width: 50px;
+    height: auto;
   }
 
   @media screen and (max-width: 767px) {
